@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adil. - Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">"
+</head>
+<body>
+    
+    <!-- Header/Navigation Section Tag -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <!-- Logo Structure for styling -->
+            <a class="Logo" href="/index.html">ADIL.</a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="/index.html" class="active">Home</a></li>
+                <li><a href="pages/about.html">About</a></li>
+                <li><a href="pages/services.html">Services</a></li>
+                <li><a href="pages/experience.html">Experience</a></li>
+                <li><a href="pages/portfolio.html">Portfolio</a></li>
+                <li><a href="pages/contact.html">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <span class="sun-icon">𖤓</span>
+                <span class="moon-icon">⏾</span>
+            </button>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-particles" id="particles"></div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 class="fade-in">Hello, I'm <span class="gradient-text">Mohd Adil Hossain</span></h1>
+                <h2 class="typing-text" id="typingText"></h2>
+                <p class="hero-description fade-in-delay">
+                    I’m a final-year Creative Computing student at Bath Spa University with a strong background in web development and design. 
+                    I’m skilled in HTML, CSS, JavaScript, Python, Java, MySQL, and MongoDB, and enjoy building interactive, user-friendly websites 
+                    and apps. I’m also experienced with tools like Figma, Canva, Capcut, Unity, GitHub, and Android Studio. I’m passionate about 
+                    creative coding and always looking to learn, collaborate, and find new opportunities in web development and UI/UX design.
+                </p>
+                <div class="hero-buttons fade-in-delay-2">
+                    <a href="pages/portfolio.html" class="btn btn-primary">View My Work</a>
+                    <a href="pages/contact.html" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-wrapper">
+                    <img src="/images/profile1.JPG" alt="ADIL. Profile" id="profileImg">
+                    <div class="glow-effect"></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- Quick Stats -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <!-- Card 1 -->
+                <div class="stat-card">
+                    <div class="stat-icon">🎓</div>
+                    <h3 class="stat-number" data-target="3">0</h3>
+                    <p>Years Experience</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="stat-card">
+                    <div class="stat-icon">💻</div>
+                    <h3 class="stat-number" data-target="15">0</h3>
+                    <p>Group Projects Completed</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="stat-card">
+                    <div class="stat-icon">🏅</div>
+                    <h3 class="stat-number" data-target="3">0</h3>
+                    <p>Achievements</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- featured work preview -->
+    <section class="featured-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <p>A list of my previous work that feels good alongside</p>
+            </div>
+            <div class="featured-grid">
+                <!-- Project 1 -->
+                <div class="featured-card">
+                    <div class="featured-image">
+                        <img src="/images/website.png" alt="Project 1">
+                        <div class="featured-overlay">
+                            <a href="https://luxe-ecommerce-website-live-afyw.vercel.app/" class="view-btn">View Project</a>
+                        </div>
+                    </div>
+                    <div class="featured-content">
+                        <h3>LUXE. E-Commerce Webiste Platform</h3>
+                        <p>I built this fashion e-commerce website using HTML, CSS, JavaScript, Node.js, and RESTful API. LUXE is a multi-page, 
+                            high-fidelity web app with a modern minimalist design for a premium brand. It features a full-stack backend, responsive 
+                            frontend, secure authentication, a shopping cart, order history, and an admin dashboard.
+                        </p>
+                        <div class="tags">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>Node.js</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="featured-card">
+                    <div class="featured-image">
+                        <img src="/images/Nurtibot.jpg" alt="Project 2">
+                        <div class="featured-overlay">
+                            <a href="https://bot.dialogflow.com/28cc032a-9799-4721-a800-a01c3e913f15" class="view-btn">View Project</a>
+                        </div>
+                    </div>
+                    <div class="featured-content">
+                        <h3>Nutribot AI Chatbot System</h3>
+                        <p>I built the Nutribot AI chatbot system for conversation by using Google Dialogflow to provide personalised nutrition facts 
+                            and fitness guidelines to give very essential ideas to get a healthy lifestyle.
+                        </p>
+                        <div class="tags">
+                            <span>Dialogflow</span>
+                            <span>AI</span>
+                            <span>Google</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="featured-card">
+                    <div class="featured-image">
+                        <img src="images/hh1.png" alt="Project 2">
+                        <div class="featured-overlay">
+                            <a href="https://github.com/DC-BSU-RAK/projects-collection-2025-MOHDADHIL2023" class="view-btn">View Project</a>
+                        </div>
+                    </div>
+                    <div class="featured-content">
+                        <h3>Mobile Healthy Habits App</h3>
+                        <p>I developed the mobile app called Healthy Habits App using advanced Python code and Kotlin in Android Studio to provide a clear 
+                            understanding of the importance and limitations of healthy vs junk food habits and to properly assess whether these habits are 
+                            good or bad for the user.
+                        </p>
+                        <div class="tags">
+                            <span>Python</span>
+                            <span>Kotlin</span>
+                            <span>Android Studio</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="view-all">
+                <a href="pages/portfolio.html" class="btn btn-outline">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Let's Work Together</h2>
+                <p>Perform you've got an idea in thoughts. Let's work together to make something amazing incredible</p>
+                <a href="pages/contact.html" class="btn btn-primary">Start a Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 href="/index.html">ADIL.</h3>
+                    <p>Building digital experiences that matter.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/mohd-adil-hossain/" aria-label="Linkedin"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/MOHDADHIL2023" aria-label="Github"><i class="fab fa-github"></i></a>
+                        <a href="https://www.youtube.com/@mhd_adil_hossain" aria-label="Youtube"><i class="fa fa-youtube-play"></i></a>
+                        <a href="https://www.instagram.com/mhd_adil_hossain/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="pages/about.html">About</a></li>
+                        <li><a href="pages/services.html">Services</a></li>
+                        <li><a href="pages/portfolio.html">Portfolio</a></li>
+                        <li><a href="pages/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="pages/services.html">Web Development</a></li>
+                        <li><a href="pages/services.html">Mobile Apps</a></li>
+                        <li><a href="pages/services.html">UI/UX Design</a></li>
+                        <li><a href="pages/services.html">Python Developer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li><a href="mailto:adil2030hossain@gmail.com">adil2030hossain@gmail.com</a></li>
+                        <li>+971 50 502 4748</li>
+                        <li>Sharjah Abutina, UAE</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Adil Hossain. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">↑</button>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
