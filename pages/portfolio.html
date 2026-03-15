@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adil. - Portfolio</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">"
+</head>
+<body>
+    
+    <!-- Header/Navigation Section Tag -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <!-- Logo Structure for styling -->
+            <a class="Logo" href="/index.html">ADIL.</a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="../pages/about.html">About</a></li>
+                <li><a href="../pages/services.html">Services</a></li>
+                <li><a href="../pages/experience.html">Experience</a></li>
+                <li><a href="../pages/portfolio.html" class="active">Portfolio</a></li>
+                <li><a href="../pages/contact.html">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <span class="sun-icon">𖤓</span>
+                <span class="moon-icon">⏾</span>
+            </button>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+     <section class="page-header">
+        <div class="container">
+            <h1 class="fade-in">Portfolio</h1>
+            <p class="fade-in-delay">A showcase of my best work and projects.</p>
+        </div>
+     </section>
+
+    <!-- Filter Buttons -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+                <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+                <button class="filter-btn" data-filter="design">UI / UX Design</button>
+                <button class="filter-btn" data-filter="ai">Ai / Machine Learning</button>
+                <button class="filter-btn" data-filter="game">Gamer</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section class="portfolio-section">
+        <div class="container">
+            <div class="portfolio-grid">
+                <!--Project 1 -->
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-image">
+                        <img src="../images/website.png" alt="LUXE. E-Commerce Platform">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>LUXE. E-Commerce Webiste Platform</h3>
+                                <p>Luxury Shopping Experience</p>
+                                <button class="view-details" onclick="openModal(0)">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-tags">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>Node.js</span>
+                    </div>
+                </div>
+
+                <!--Project 2 -->
+                <div class="portfolio-item" data-category="ai">
+                    <div class="portfolio-image">
+                        <img src="../images/Nurtibot.jpg" alt="Ai Chatbot">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Nutribot Ai Chatbot System</h3>
+                                <p>Intelligent customer servive automation</p>
+                                <button class="view-details" onclick="openModal(1)">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-tags">
+                        <span>Ai</span>
+                        <span>Google</span>
+                        <span>Dialogflow</span>
+                    </div>
+                </div>
+
+                <!--Project 3 -->
+                <div class="portfolio-item" data-category="mobile">
+                    <div class="portfolio-image">
+                        <img src="../images/hh1.png" alt="Nutrition App">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Mobile Healthy Habits App</h3>
+                                <p>Cross-platform health and fitness lifestyle routines.</p>
+                                <button class="view-details" onclick="openModal(2)">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-tags">
+                        <span>Python</span>
+                        <span>Kotlin</span>
+                        <span>Android Studio</span>
+                    </div>
+                </div>
+
+                <!--Project 4 -->
+                <div class="portfolio-item" data-category="design">
+                    <div class="portfolio-image">
+                        <img src="../images/Travel.png" alt="Travel Resign App">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Smartphone Travel App</h3>
+                                <p>An interactive high-fidelity prototype for seamless trip planning and UX discovery.</p>
+                                <button class="view-details" onclick="openModal(3)">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-tags">
+                        <span>Figma</span>
+                        <span>Prototype</span>
+                        <span>UI / UX</span>
+                    </div>
+                </div>
+
+                <!--Project 5 -->
+                <div class="portfolio-item" data-category="ai">
+                    <div class="portfolio-image">
+                        <img src="../images/Heart_Disease_Prediction..png" alt="Heart Disease Prediction">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Heart Disease Prediction</h3>
+                                <p>A machine learning project by Unisg using health metrics to predict cardiovascular risks with high accuracy.</p>
+                                <button class="view-details" onclick="openModal(4)">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-tags">
+                        <span>Python</span>
+                        <span>Scikit - Learn</span>
+                        <span>Kaggle</span>
+                        <span>Ai / Machine Learning</span>
+                        <span>Data Analysis</span>
+                    </div>
+                </div>
+
+                <!--Project 6 -->
+                <div class="portfolio-item" data-category="design">
+                    <div class="portfolio-image">
+                        <img src="../images/BSU.png" alt="BSU RAK Website Design">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>BSU RAK Campus Redesign</h3>
+                                <p>A modern UI/UX design approach for the university campus site.</p>
+                                <button class="view-details" onclick="openModal(5)">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-tags">
+                        <span>Figma</span>
+                        <span>UI/UX</span>
+                        <span>Web Design</span>
+                        <span>Brand Identity</span>
+                    </div>
+                </div>
+
+                <!--Project 7 -->
+                <div class="portfolio-item" data-category="mobile">
+                    <div class="portfolio-image">
+                        <img src="../images/Location.png" alt="Smart Location App">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Smart Location App</h3>
+                                <p>The Android Studio application shows features real-time GPS tracking and map integration.</p>
+                                <button class="view-details" onclick="openModal(6)">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-tags">
+                        <span>Python</span>
+                        <span>Kotlin</span>
+                        <span>Android Studio</span>
+                        <span>GPS</span>
+                    </div>
+                </div>
+
+                <!--Project 8 -->
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-image">
+                        <img src="../images/canadian university.png" alt="Smart Location App">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Canadian University Dubai Web Project</h3>
+                                <p>A responsive institutional website developed for web development first.</p>
+                                <button class="view-details" onclick="openModal(7)">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-tags">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                        <span>Github Pages</span>
+                    </div>
+                </div>
+
+                <!--Project 9 -->
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-image">
+                        <img src="../images/TravelW.png" alt="Travel Responsive Website">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Travel Responsive Website</h3>
+                                <p>Advanced responsive web development by using modern CSS layouts and interactivity.</p>
+                                <button class="view-details" onclick="openModal(8)">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-tags">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                        <span>Responsive Design</span>
+                        <span>Vercel</span>
+                    </div>
+                </div>
+
+                <!--Project 10 -->
+                <div class="portfolio-item" data-category="game">
+                    <div class="portfolio-image">
+                        <img src="../images/angry birds.png" alt="Angry Birds 2D Game">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Angry Birds 2D Game</h3>
+                                <p>A physics-based 2D game developed by using Unity Hub and C#.</p>
+                                <button class="view-details" onclick="openModal(9)">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-tags">
+                        <span>Unity Hub</span>
+                        <span>C#</span>
+                        <span>Game Design</span>
+                        <span>Itch.io</span>
+                    </div>
+                </div>
+
+                <!--Project 11 -->
+                <div class="portfolio-item" data-category="game">
+                    <div class="portfolio-image">
+                        <img src="../images/Escaping.png" alt="Escaping The Prison">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Escaping The Prison</h3>
+                                <p>A narrative-driven pixel art game created with bitsy.</p>
+                                <button class="view-details" onclick="openModal(10)">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-tags">
+                        <span>Bitsy</span>
+                        <span>Pixel Art</span>
+                        <span>Narrative Design</span>
+                        <span>Itch.io</span>
+                    </div>
+                </div>
+
+                <!--Project 12 -->
+                <div class="portfolio-item" data-category="game">
+                    <div class="portfolio-image">
+                        <img src="../images/hide and seek.jpg" alt="Hide & Seek">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Hide & Seek</h3>
+                                <p>An interactive choices-based narrative game built with the Twine game.</p>
+                                <button class="view-details" onclick="openModal(11)">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-tags">
+                        <span>Twine</span>
+                        <span>Interactive Fiction</span>
+                        <span>Game Logic</span>
+                        <span>Storytelling</span>
+                    </div>
+                </div>
+
+                <!--Project 13 -->
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-image">
+                        <img src="../images/PrimeMarketing.png" alt="Prime Marketing Website">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Prime Marketing Website</h3>
+                                <p>Digital Solution for Creative Industry Challenges we build for professionals. brand growth.</p>
+                                <button class="view-details" onclick="openModal(12)">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-tags">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                        <span>Responsive Design</span>
+                        <span>Marketing Tech</span>
+                        <span>Vercel</span>
+                    </div>
+                </div>
+
+                <!--Project 14 -->
+                <div class="portfolio-item" data-category="game">
+                    <div class="portfolio-image">
+                        <img src="../images/p5.js.png" alt="Prime Marketing Website">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>P5.JS Generative Art Gallery</h3>
+                                <p>A collection of algorithm designs and interactive visual experiments.</p>
+                                <button class="view-details" onclick="openModal(13)">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-tags">
+                        <span>Generative Art</span>
+                        <span>p5.js</span>
+                        <span>JavaScript</span>
+                        <span>Creative Coding</span>
+                    </div>
+                </div>
+
+                <!--Project 15 -->
+                <div class="portfolio-item" data-category="ai">
+                    <div class="portfolio-image">
+                        <img src="../images/kaggle.png" alt="ML Experiment Portfolio">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Machine Learning Experiment Portfolio</h3>
+                                <p>Smart home forecasting and seismic activity classification by using linear and logistic regression.</p>
+                                <button class="view-details" onclick="openModal(14)">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-tags">
+                        <span>Python</span>
+                        <span>Linear Regression</span>
+                        <span>Linear / Logistic Regression</span>
+                        <span>Data Science</span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal" id="projectModal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times</span>
+            <div class="modal-body" id="modalBody">
+                <!-- Dynamic content will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 href="/index.html">ADIL.</h3>
+                    <p>Building digital experiences that matter.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/mohd-adil-hossain/" aria-label="Linkedin"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/MOHDADHIL2023" aria-label="Github"><i class="fab fa-github"></i></a>
+                        <a href="https://www.youtube.com/@mhd_adil_hossain" aria-label="Youtube"><i class="fa fa-youtube-play"></i></a>
+                        <a href="https://www.instagram.com/mhd_adil_hossain/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../pages/about.html">About</a></li>
+                        <li><a href="../pages/services.html">Services</a></li>
+                        <li><a href="../pages/portfolio.html">Portfolio</a></li>
+                        <li><a href="../pages/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="../pages/services.html">Web Development</a></li>
+                        <li><a href="../pages/services.html">Mobile Apps</a></li>
+                        <li><a href="../pages/services.html">UI/UX Design</a></li>
+                        <li><a href="../pages/services.html">Python Developer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li><a href="mailto:adil2030hossain@gmail.com">adil2030hossain@gmail.com</a></li>
+                        <li>+971 50 502 4748</li>
+                        <li>Sharjah Abutina, UAE</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Adil Hossain. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">↑</button>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/portfolio.js"></script>
+
+</body>
+</html>
