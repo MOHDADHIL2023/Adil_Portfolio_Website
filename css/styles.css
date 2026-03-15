@@ -1352,6 +1352,49 @@ body:not(.dark-mode) .theme-toggle .sun-icon {
     display: block;
 }
 
+/* ===== ACHIEVEMENTS ===== */
+.achievements-section {
+    padding: 80px 20px;
+    background: var(--bg-primary);
+}
+
+.achievements-grid {
+    display: flex;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.achievement-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: var(--shadow);
+}
+
+.achievement-card:hover {
+    transform: translateX(-10px);
+}
+
+.achievement-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.achievement-card h3 {
+    font-family: "Afacad", sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.achievement-card p {
+    color: var(--text-light);
+    font-weight: 700;
+    font-family: Italiana, sans-serif;
+}
+
 /* ===== FOOTER ===== */
 .footer {
     background: black;
