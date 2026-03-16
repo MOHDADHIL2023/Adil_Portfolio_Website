@@ -136,7 +136,7 @@ const projectsData = [
         category: 'Game Developer / Creative Coding',
         description: 'I created a narrative game that is still in the works and was made with the Bitsy game engine. This project looks at lo-fi aesthetics and environmental storytelling, with an emphasis on user interaction and mechanics that are based on dialogue. It shows that you can make atmospheric digital experiences even when you have to work with limited technology.',
         technologies: ['Bitsy', 'Game Design', 'Pixel Art', 'Narrative Scripting'],
-        duration: '1 months',
+        duration: '1 month',
         client: 'Game Developer / Creative Coding Project',
         link: 'https://mohd-adil-hossain.itch.io/escaping-the-prison'
     },
@@ -145,7 +145,7 @@ const projectsData = [
         category: 'Interactive Narrative',
         description: 'I made a text-based adventure game that you can really get into using Twine. The project is all about complicated branching stories and state-based logic, where the choices users make have a big effect on how the story ends. It shows that you are good at narrative design, making logical flow charts, and telling stories from the user point of view.',
         technologies: ['Twine', 'Game Design', 'Logic Branching'],
-        duration: '1 months',
+        duration: '1 month',
         client: 'Game Developer / Creative Coding Project',
         link: 'https://mohd-adil-hossain.itch.io/hide-and-seek'
     },
@@ -175,6 +175,33 @@ const projectsData = [
         duration: '4 months',
         client: 'Machine Learning (Academic/Personal)',
         link: 'https://github.com/MOHDADHIL2023/Experiment-Porftolio-Machine-Learning?tab=readme-ov-file'
+    },
+    {
+        title: 'Python Project Software Development',
+        category: 'Software Development',
+        description: 'I made a complete set of Python programs that focus on GUI development and functional logic. Some of the main projects are a Student Management System that can create, read, update, and delete records, a Data-Driven Country Information app, an interactive Maths Quiz, and a simulation of a vending machine. This suite shows that you know how to use Tkinter for UI, Object-Oriented Programming (OOP), and managing data well.',
+        technologies: ['Python', 'Tkinter', 'Software Developer'],
+        duration: '4 months',
+        client: 'Code Lab 1 & 2 (BSU)',
+        link: 'https://github.com/MOHDADHIL2023/Python_Projects'
+    },
+    {
+        title: 'Renewable Energy Visualization',
+        category: 'Data Visualization (Emerging Technologies)',
+        description: 'I made this project in Flourish Studio. It shows how the world is moving toward more sustainable energy sources, with a focus on how renewable power has grown over the past ten years.',
+        technologies: ['Flourish Studio', 'Sustainability', 'Data Analysis'],
+        duration: '1 month',
+        client: 'Data Visualization (Emerging Technologies)',
+        link: 'https://public.flourish.studio/story/3054531/'
+    },
+    {
+        title: 'Discover BSU Web Design',
+        category: 'Digital Visual Design',
+        description: 'I created a full web design project for Bath Spa University. It has a user-centred design that is meant to make it easier for students to find information about the campus.',
+        technologies: ['Canva', 'UI/UX Design', 'Visual Design'],
+        duration: '1 month',
+        client: 'Bath Spa University (Academic)',
+        link: 'https://adilcanva24.my.canva.site/bath-spa-university-rak'
     }
 ];
 
