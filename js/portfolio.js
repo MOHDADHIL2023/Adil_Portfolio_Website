@@ -66,7 +66,7 @@ const projectsData = [
         technologies: ['Python', 'Kotlin', 'Android Studio'],
         duration: '10 months',
         client: 'Healthy Habits App',
-        link: 'https://github.com/DC-BSU-RAK/projects-collection-2025-MOHDADHIL2023'
+        link: 'https://github.com/MOHDADHIL2023/Healthy_Habits_Second_App'
     },
     {
         title: 'SmartPhone Travel App',
@@ -102,7 +102,7 @@ const projectsData = [
         technologies: ['Android Studio', 'Python', 'Kotlin', 'GPS'],
         duration: '3 months',
         client: 'App Design (Academic)',
-        link: 'https://github.com/DC-BSU-RAK/projects-collection-2025-MOHDADHIL2023'
+        link: 'https://github.com/MOHDADHIL2023/Nan_Calculator_Location_App'
     },
     {
         title: 'Canadian University Dubai Project',
