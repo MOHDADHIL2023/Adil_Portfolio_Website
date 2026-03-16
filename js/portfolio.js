@@ -57,7 +57,7 @@ const projectsData = [
         technologies: ['Python', 'Ai', 'Dialogflow'],
         duration: '4 months',
         client: 'Nutribot',
-        link: 'https://bot.dialogflow.com/28cc032a-9799-4721-a800-a01c3e913f15'
+        link: 'https://nutribot-chatbot-1.vercel.app/'
     },
     {
         title: 'Mobile Healthy Habits App',
