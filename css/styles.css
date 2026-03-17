@@ -872,6 +872,193 @@ body:not(.dark-mode) .theme-toggle .sun-icon {
     font-weight: 600;
 }
 
+/* ===== CV DOWNLOAD BANNER ===== */
+.cv-banner {
+    padding: 60px 20px;
+    background: var(--gradient);
+    position: relative;
+    overflow: hidden;
+}
+ 
+.cv-banner::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+}
+ 
+.cv-banner::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -5%;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    animation: float 8s ease-in-out infinite reverse;
+}
+ 
+.cv-banner-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+    z-index: 1;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+ 
+.cv-banner-text {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    color: white;
+}
+ 
+.cv-banner-icon {
+    font-size: 4rem;
+    line-height: 1;
+    animation: bounce 2s ease-in-out infinite;
+}
+ 
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+ 
+.cv-banner-text h2 {
+    font-size: 2rem;
+    font-family: "Afacad", sans-serif;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+ 
+.cv-banner-text p {
+    font-size: 1.2rem;
+    opacity: 0.95;
+    font-weight: 700;
+    font-family: "Italiana", sans-serif;
+    margin: 0;
+}
+ 
+.cv-banner-actions {
+    flex-shrink: 0;
+}
+ 
+.cv-download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 2.5rem;
+    background: white;
+    font-family: "Afacad", sans-serif;
+    color: var(--primary);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+ 
+.cv-download-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(37, 99, 235, 0.1);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+ 
+.cv-download-btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+ 
+.cv-download-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    background: #f0f9ff;
+}
+ 
+.download-icon {
+    font-size: 1.5rem;
+    animation: downloadPulse 2s ease-in-out infinite;
+}
+ 
+@keyframes downloadPulse {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(3px);
+    }
+}
+ 
+.cv-download-btn span {
+    position: relative;
+    z-index: 1;
+}
+ 
+/* Download Notification */
+.download-notification {
+    position: fixed;
+    top: 100px;
+    right: -300px;
+    background: var(--card-bg);
+    color: var(--text-dark);
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    z-index: 10000;
+    font-family: "Afacad", sans-serif;
+    transition: right 0.3s ease;
+    border-left: 4px solid var(--secondary);
+}
+ 
+.download-notification.show {
+    right: 20px;
+}
+ 
+.notification-icon {
+    width: 30px;
+    height: 30px;
+    background: var(--secondary);
+    color: white;
+    border-radius: 50%;
+    font-family: "Afacad", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+ 
+.notification-text {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
 /* ===== SERVICES ===== */
 .services-section {
     padding: 80px 20px;
@@ -1619,6 +1806,28 @@ body:not(.dark-mode) .theme-toggle .sun-icon {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 1.5rem;
     }
+
+    .cv-banner-content {
+        flex-direction: column;
+        text-align: center;
+    }
+ 
+    .cv-banner-text {
+        flex-direction: column;
+        text-align: center;
+    }
+ 
+    .cv-banner-icon {
+        font-size: 3rem;
+    }
+ 
+    .cv-banner-text h2 {
+        font-size: 1.8rem;
+    }
+ 
+    .cv-banner-text p {
+        font-size: 1rem;
+    }
 }
 
 /* Tablet specific */
@@ -1650,6 +1859,31 @@ body:not(.dark-mode) .theme-toggle .sun-icon {
  
     .achievement-card p {
         font-size: 0.9rem;
+    }
+
+    .cv-banner {
+        padding: 40px 20px;
+    }
+ 
+    .cv-banner-icon {
+        font-size: 2.5rem;
+    }
+ 
+    .cv-banner-text h2 {
+        font-size: 1.5rem;
+    }
+ 
+    .cv-banner-text p {
+        font-size: 0.95rem;
+    }
+ 
+    .cv-download-btn {
+        padding: 0.9rem 2rem;
+        font-size: 1rem;
+    }
+ 
+    .download-icon {
+        font-size: 1.3rem;
     }
 
     .hero-text h1 {

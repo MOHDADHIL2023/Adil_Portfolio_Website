@@ -46,6 +46,46 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// ===== CV DOWNLOAD TRACKING =====
+const cvDownloadBtn = document.querySelector('.cv-download-btn');
+ 
+if (cvDownloadBtn) {
+    cvDownloadBtn.addEventListener('click', function(e) {
+        // Show download notification
+        showDownloadNotification();
+        
+        // Track download
+        console.log('CV Downloaded at:', new Date().toLocaleString());
+    });
+}
+ 
+function showDownloadNotification() {
+    // Create notification element
+    const notification = document.createElement('div');
+    notification.className = 'download-notification';
+    notification.innerHTML = `
+        <span class="notification-icon">✓</span>
+        <span class="notification-text">CV Download Started!</span>
+    `;
+    
+    // Add to body
+    document.body.appendChild(notification);
+    
+    // Show notification
+    setTimeout(() => {
+        notification.classList.add('show');
+    }, 100);
+    
+    // Remove notification after 3 seconds
+    setTimeout(() => {
+        notification.classList.remove('show');
+        setTimeout(() => {
+            notification.remove();
+        }, 300);
+    }, 3000);
+}
+ 
+
 // ===== TYPING EFFECT =====
 const typingElement = document.getElementById('typingText');
 if (typingElement) {
