@@ -1,10 +1,62 @@
+// ===== CUSTOM CURSOR =====
+const cursor = document.createElement('div');
+const cursorFollower = document.createElement('div');
+cursor.className = 'cursor';
+cursorFollower.className = 'cursor-follower';
+document.body.appendChild(cursor);
+document.body.appendChild(cursorFollower);
+
+let mouseX = 0;
+let mouseY = 0;
+let followerX = 0;
+let followerY = 0;
+
+document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    cursor.style.left = mouseX + 'px';
+    cursor.style.top = mouseY + 'px';
+});
+
+// Smooth follower animation
+function animateFollower() {
+    const distX = mouseX - followerX;
+    const distY = mouseY - followerY;
+    
+    followerX += distX / 10;
+    followerY += distY / 10;
+    
+    cursorFollower.style.left = followerX + 'px';
+    cursorFollower.style.top = followerY + 'px';
+    
+    requestAnimationFrame(animateFollower);
+}
+animateFollower();
+
+// Expand cursor on hover over clickable elements
+setTimeout(() => {
+    const hoverElements = document.querySelectorAll('a, button, input, textarea, select, .btn, .card, .project-card, .skill-card, .cert-card, .service-card, .featured-card, .stat-card, .why-card, .achievement-card, .portfolio-item, .faq-question');
+    
+    hoverElements.forEach(element => {
+        element.addEventListener('mouseenter', () => {
+            cursor.classList.add('expand');
+            cursorFollower.classList.add('expand');
+        });
+        
+        element.addEventListener('mouseleave', () => {
+            cursor.classList.remove('expand');
+            cursorFollower.classList.remove('expand');
+        });
+    });
+}, 1000);
+
 // ===== NAVIGATION =====
 const navbar = document.getElementById('navbar');
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('navMenu');
 const themeToggle = document.getElementById('themeToggle');
 
-// Mobile menu toggle 
+// Mobile menu toggle
 if (hamburger) {
     hamburger.addEventListener('click', () => {
         navMenu.classList.toggle('active');
@@ -12,9 +64,9 @@ if (hamburger) {
     });
 }
 
-//Theme Toggle 
+// Theme Toggle
 if (themeToggle) {
-    // checking for saved theme preferences or default to light mode
+    // Check for saved theme preference or default to light mode
     const currentTheme = localStorage.getItem('theme') || 'light';
     if (currentTheme === 'dark') {
         document.body.classList.add('dark-mode');
@@ -23,13 +75,13 @@ if (themeToggle) {
     themeToggle.addEventListener('click', () => {
         document.body.classList.toggle('dark-mode');
         
-        // save theme preference
+        // Save theme preference
         const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
         localStorage.setItem('theme', theme);
     });
 }
 
-// close mobile menu when clicking a link
+// Close mobile menu when clicking a link
 document.querySelectorAll('.nav-menu a').forEach(link => {
     link.addEventListener('click', () => {
         navMenu.classList.remove('active');
@@ -37,18 +89,18 @@ document.querySelectorAll('.nav-menu a').forEach(link => {
     });
 });
 
-// navbar scroll effect
+// Navbar scroll effect
 window.addEventListener('scroll', () => {
     if (window.scrollY > 100) {
         navbar.classList.add('scrolled');
     } else {
-        navbar.classList.remove('scrolled')
+        navbar.classList.remove('scrolled');
     }
 });
 
 // ===== CV DOWNLOAD TRACKING =====
 const cvDownloadBtn = document.querySelector('.cv-download-btn');
- 
+
 if (cvDownloadBtn) {
     cvDownloadBtn.addEventListener('click', function(e) {
         // Show download notification
@@ -58,7 +110,7 @@ if (cvDownloadBtn) {
         console.log('CV Downloaded at:', new Date().toLocaleString());
     });
 }
- 
+
 function showDownloadNotification() {
     // Create notification element
     const notification = document.createElement('div');
@@ -84,15 +136,92 @@ function showDownloadNotification() {
         }, 300);
     }, 3000);
 }
- 
+
+// ===== CERTIFICATE LIGHTBOX =====
+let currentCertIndex = 0;
+const certificates = [
+    { src: '../images/1.png', title: 'Build Intelligence Agents', org: "Google Agent's Development Kit" },
+    { src: '../images/2.png', title: 'Dream Vs Reality: Ai Battle', org: 'Google Developer Group On Campus' },
+    { src: '../images/3.png', title: 'Intro Of Machine Learning', org: 'Kaggle' },
+    { src: '../images/4.png', title: 'Group Projects Work Appreciation', org: 'Prime Marketing' },
+    { src: '../images/5.png', title: 'Building RESTful APIs with Node.js & Express', org: 'Linkedin Learning' },
+    { src: '../images/6.png', title: 'AI Foundations for Machine Learning', org: 'Linkedin Learning' },
+    { src: '../images/7.jpg', title: 'Intro of Python Tkinter', org: 'My Great Learning' },
+    { src: '../images/8.jpg', title: 'Introduction To Python', org: 'Sololearn' },
+    { src: '../images/9.jpg', title: 'Python Intermediate', org: 'Sololearn' }
+];
+
+function openLightbox(index) {
+    currentCertIndex = index;
+    const lightbox = document.getElementById('certLightbox');
+    const lightboxImage = document.getElementById('lightboxImage');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    const lightboxCounter = document.getElementById('lightboxCounter');
+    
+    if (lightbox && lightboxImage && certificates[index]) {
+        lightboxImage.src = certificates[index].src;
+        lightboxCaption.innerHTML = `<strong>${certificates[index].title}</strong><br>${certificates[index].org}`;
+        lightboxCounter.textContent = `${index + 1} / ${certificates.length}`;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closeLightbox() {
+    const lightbox = document.getElementById('certLightbox');
+    if (lightbox) {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+}
+
+function navigateCert(direction) {
+    currentCertIndex += direction;
+    
+    // Loop around
+    if (currentCertIndex < 0) {
+        currentCertIndex = certificates.length - 1;
+    } else if (currentCertIndex >= certificates.length) {
+        currentCertIndex = 0;
+    }
+    
+    openLightbox(currentCertIndex);
+}
+
+// Keyboard navigation for lightbox
+document.addEventListener('keydown', function(e) {
+    const lightbox = document.getElementById('certLightbox');
+    if (lightbox && lightbox.classList.contains('active')) {
+        if (e.key === 'Escape') {
+            closeLightbox();
+        } else if (e.key === 'ArrowLeft') {
+            navigateCert(-1);
+        } else if (e.key === 'ArrowRight') {
+            navigateCert(1);
+        }
+    }
+});
+
+// Close lightbox when clicking outside image
+document.addEventListener('DOMContentLoaded', function() {
+    const lightbox = document.getElementById('certLightbox');
+    if (lightbox) {
+        lightbox.addEventListener('click', function(e) {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+    }
+});
 
 // ===== TYPING EFFECT =====
 const typingElement = document.getElementById('typingText');
 if (typingElement) {
     const texts = [
-        'Web Developer',
+        'Full Stack Developer',
         'UI/UX Designer',
-        'Python Developer'
+        'Problem Solver',
+        'Tech Enthusiast'
     ];
     let textIndex = 0;
     let charIndex = 0;
@@ -101,7 +230,7 @@ if (typingElement) {
 
     function type() {
         const currentText = texts[textIndex];
-
+        
         if (isDeleting) {
             typingElement.textContent = currentText.substring(0, charIndex - 1);
             charIndex--;
@@ -180,7 +309,7 @@ const skillObserver = new IntersectionObserver((entries) => {
 
 skillBars.forEach(bar => skillObserver.observe(bar));
 
-// ===== BACK TO TOP BUTTON ===== //
+// ===== BACK TO TOP BUTTON =====
 const backToTop = document.getElementById('backToTop');
 
 if (backToTop) {
@@ -197,6 +326,55 @@ if (backToTop) {
             top: 0,
             behavior: 'smooth'
         });
+    });
+}
+
+// ===== FAQ ACCORDION =====
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    
+    question.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+        
+        // Close all other items
+        faqItems.forEach(otherItem => {
+            otherItem.classList.remove('active');
+        });
+        
+        // Toggle current item
+        if (!isActive) {
+            item.classList.add('active');
+        }
+    });
+});
+
+// ===== CONTACT FORM =====
+const contactForm = document.getElementById('contactForm');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        const formData = new FormData(contactForm);
+        const data = Object.fromEntries(formData);
+        
+        // Show success message
+        const formMessage = document.getElementById('formMessage');
+        formMessage.className = 'form-message success';
+        formMessage.textContent = 'Thank you! Your message has been sent successfully. I will get back to you soon.';
+        
+        // Reset form
+        contactForm.reset();
+        
+        // Hide message after 5 seconds
+        setTimeout(() => {
+            formMessage.className = 'form-message';
+        }, 5000);
+        
+        // In a real application, you would send this data to a server
+        console.log('Form Data:', data);
     });
 }
 
@@ -239,34 +417,6 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
-
-// ===== CONTACT FORM =====
-const contactForm = document.getElementById('contactForm');
- 
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        const formData = new FormData(contactForm);
-        const data = Object.fromEntries(formData);
-        
-        // Show success message
-        const formMessage = document.getElementById('formMessage');
-        formMessage.className = 'form-message success';
-        formMessage.textContent = 'Thank you! Your message has been sent successfully. I will get back to you soon.';
-        
-        // Reset form
-        contactForm.reset();
-        
-        // Hide message after 5 seconds
-        setTimeout(() => {
-            formMessage.className = 'form-message';
-        }, 5000);
-        
-        // In a real application, you would send this data to a server
-        console.log('Form Data:', data);
-    });
-}
 
 // ===== SMOOTH SCROLL FOR ANCHOR LINKS =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

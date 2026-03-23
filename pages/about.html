@@ -320,9 +320,9 @@
             </div>
             <div class="cert-grid">
                 <!-- Cert 1 -->
-                <div class="cert-card">
+                <div class="cert-card" onclick="openLightbox(0)">
                     <div class="cert-image">
-                        <img src="../images/1.png" alt="GDG Certificate">
+                        <img src="../images/1.png" alt="GDG Certificate" data-cert-title="Build Intelligence Agents" data-cert-org="Google Agent's Development Kit">
                     </div>
                     <div class="cert-info">
                         <h3>Build Intelligence Agents</h3>
@@ -331,9 +331,9 @@
                     </div>
                 </div>
                 <!-- Cert 2 -->
-                <div class="cert-card">
+                <div class="cert-card" onclick="openLightbox(1)">
                     <div class="cert-image">
-                        <img src="../images/2.png" alt="GDG Certificate">
+                        <img src="../images/2.png" alt="GDG Certificate" data-cert-title="Dream Vs Reality: Ai Battle" data-cert-org="Google Developer Group On Campus">
                     </div>
                     <div class="cert-info">
                         <h3>Dream Vs Reality: Ai Battle</h3>
@@ -342,9 +342,9 @@
                     </div>
                 </div>
                 <!-- Cert 3 -->
-                <div class="cert-card">
+                <div class="cert-card" onclick="openLightbox(2)">
                     <div class="cert-image">
-                        <img src="../images/3.png" alt="Kaggle Certificate">
+                        <img src="../images/3.png" alt="Kaggle Certificate" data-cert-title="Intro Of Machine Learning" data-cert-org="Kaggle">
                     </div>
                     <div class="cert-info">
                         <h3>Intro Of Machine Learning</h3>
@@ -353,9 +353,9 @@
                     </div>
                 </div>
                 <!-- Cert 4 -->
-                <div class="cert-card">
+                <div class="cert-card" onclick="openLightbox(3)">
                     <div class="cert-image">
-                        <img src="../images/4.png" alt="Group Project Certificate">
+                        <img src="../images/4.png" alt="Group Project Certificate" data-cert-title="Group Projects Work Appreciation" data-cert-org="Prime Marketing">
                     </div>
                     <div class="cert-info">
                         <h3>Group Projects Work Appreciation</h3>
@@ -364,9 +364,9 @@
                     </div>
                 </div>
                 <!-- Cert 5 -->
-                <div class="cert-card">
+                <div class="cert-card" onclick="openLightbox(4)">
                     <div class="cert-image">
-                        <img src="../images/5.png" alt="Linkedin Learning Certificate">
+                        <img src="../images/5.png" alt="Linkedin Learning Certificate" data-cert-title="Building RESTful APIs with Node.js & Express" data-cert-org="Linkedin Learning">
                     </div>
                     <div class="cert-info">
                         <h3>Building RESTful APIs with Node.js & Express</h3>
@@ -375,9 +375,9 @@
                     </div>
                 </div>
                 <!-- Cert 6 -->
-                <div class="cert-card">
+                <div class="cert-card" onclick="openLightbox(5)">
                     <div class="cert-image">
-                        <img src="../images/6.png" alt="Linkedin Learning Certificate">
+                        <img src="../images/6.png" alt="Linkedin Learning Certificate" data-cert-title="AI Foundations for Machine Learning" data-cert-org="Linkedin Learning">
                     </div>
                     <div class="cert-info">
                         <h3>AI Foundations for Machine Learning</h3>
@@ -386,9 +386,9 @@
                     </div>
                 </div>
                 <!-- Cert 7 -->
-                <div class="cert-card">
+                <div class="cert-card" onclick="openLightbox(6)">
                     <div class="cert-image">
-                        <img src="../images/7.jpg" alt="My Great Learning Certificate">
+                        <img src="../images/7.jpg" alt="My Great Learning Certificate" data-cert-title="Intro of Python Tkinter" data-cert-org="My Great Learning">
                     </div>
                     <div class="cert-info">
                         <h3>Intro of Python Tkinter</h3>
@@ -397,9 +397,9 @@
                     </div>
                 </div>
                 <!-- Cert 8 -->
-                <div class="cert-card">
+                <div class="cert-card" onclick="openLightbox(7)">
                     <div class="cert-image">
-                        <img src="../images/8.jpg" alt="Sololearn Certificate">
+                        <img src="../images/8.jpg" alt="Sololearn Certificate" data-cert-title="Introduction To Python" data-cert-org="Sololearn">
                     </div>
                     <div class="cert-info">
                         <h3>Introduction To Python</h3>
@@ -408,9 +408,9 @@
                     </div>
                 </div>
                 <!-- Cert 9 -->
-                <div class="cert-card">
+                <div class="cert-card" onclick="openLightbox(8)">
                     <div class="cert-image">
-                        <img src="../images/9.jpg" alt="Sololearn Certificate">
+                        <img src="../images/9.jpg" alt="Sololearn Certificate" data-cert-title="Python Intermediate" data-cert-org="Sololearn">
                     </div>
                     <div class="cert-info">
                         <h3>Python Intermediate</h3>
@@ -421,6 +421,18 @@
             </div>
         </div>
     </section>
+
+    <!-- Certificate Lightbox Modal -->
+    <div class="cert-lightbox" id="certLightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <button class="lightbox-nav prev" onclick="navigateCert(-1)">&#10094;</button>
+        <button class="lightbox-nav next" onclick="navigateCert(1)">&#10095;</button>
+        <div class="lightbox-content">
+            <img src="" alt="Certificate" id="lightboxImage">
+            <div class="lightbox-caption" id="lightboxCaption"></div>
+            <div class="lightbox-counter" id="lightboxCounter"></div>
+        </div>
+    </div>
 
     <!-- CV Download Banner -->
     <section class="cv-banner">
