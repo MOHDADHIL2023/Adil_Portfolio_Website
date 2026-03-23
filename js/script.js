@@ -218,10 +218,9 @@ document.addEventListener('DOMContentLoaded', function() {
 const typingElement = document.getElementById('typingText');
 if (typingElement) {
     const texts = [
-        'Full Stack Developer',
-        'UI/UX Designer',
-        'Problem Solver',
-        'Tech Enthusiast'
+        'Web Developer',
+        'Python Developer',
+        'UI/UX Designer'
     ];
     let textIndex = 0;
     let charIndex = 0;
