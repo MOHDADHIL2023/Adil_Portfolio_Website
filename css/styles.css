@@ -285,7 +285,7 @@ body:not(.dark-mode) .theme-toggle .sun-icon {
 }
 
 .gradient-text {
-    background: linear-gradient(135deg, #0f172a 0%, #1e1e1e 100%);
+    background: linear-gradient(135deg, #26314a 0%, #1e1e1e 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
