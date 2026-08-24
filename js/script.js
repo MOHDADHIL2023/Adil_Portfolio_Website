@@ -149,7 +149,8 @@ const certificates = [
     { src: '../images/7.jpg', title: 'Intro of Python Tkinter', org: 'My Great Learning' },
     { src: '../images/8.jpg', title: 'Introduction To Python', org: 'Sololearn' },
     { src: '../images/9.jpg', title: 'Python Intermediate', org: 'Sololearn' },
-    { src: '../images/10.png', title: 'Introduction To Cybersecurity', org: 'Cisco' }
+    { src: '../images/10.png', title: 'Introduction To Cybersecurity', org: 'Cisco' },
+    { src: '../images/11.png', title: 'Vibe Code Challenge', org: 'Google Developer Group On Campus' }
 ];
 
 function openLightbox(index) {
