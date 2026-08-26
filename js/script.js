@@ -150,7 +150,8 @@ const certificates = [
     { src: '../images/8.jpg', title: 'Introduction To Python', org: 'Sololearn' },
     { src: '../images/9.jpg', title: 'Python Intermediate', org: 'Sololearn' },
     { src: '../images/10.png', title: 'Introduction To Cybersecurity', org: 'Cisco' },
-    { src: '../images/11.png', title: 'Vibe Code Challenge', org: 'Google Developer Group On Campus' }
+    { src: '../images/11.png', title: 'Vibe Code Challenge', org: 'Google Developer Group On Campus' },
+    { src: '../images/12.png', title: 'Ai For Beginners', org: 'HP LIFE' }
 ];
 
 function openLightbox(index) {
